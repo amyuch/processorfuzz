@@ -1,0 +1,62 @@
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/AM2/prefuzz/processorfuzz/ProcessorFuzz/Fuzzer'
+rm -f results.xml
+MODULE=ProcessorFuzz TESTCASE= TOPLEVEL=RocketTile TOPLEVEL_LANG=verilog \
+         build_rocket_batch1/Vtop +DEBUG=0 +TRACE=batch1/trace/   
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:79   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Verilator version 5.020 2024-01-01
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.0 from /home/AM2/chipyard/.conda-env/lib/python3.10/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1759051940
+     0.00ns INFO     cocotb.regression                  Found test ProcessorFuzz.Run_001
+     0.00ns INFO     cocotb.regression                  running Run_001 (1/1)
+                                                          Automatically generated test
+                                                          
+                                                          toplevel: 'RocketTile'
+                                                          num_iter: 100
+                                                          template: 'Template'
+                                                          in_file: None
+                                                          out: 'batch1'
+                                                          record: 0
+                                                          multicore: 0
+                                                          debug: 0
+                                                          prob_intr: 0
+                                                          no_guide: 0
+                                                          run_elf: None
+                                                          seed_dir: None
+                                                          ALL_CSR: 1
+                                                          FP_CSR: 0
+                                                          cov_log: 'batch1/cov_log_20250928.txt'
+                                                          start_time: 1759051940.2723467
+/home/AM2/prefuzz/processorfuzz/ProcessorFuzz/Fuzzer/RTLSim/src/adapters/tile_adapter.py:61: DeprecationWarning: Setting values on handles using the ``handle <= value`` syntax is deprecated. Instead use the ``handle.value = value`` syntax
+  self.reset_vector_port <= self.reset_vector
+  1000.00ns INFO     cocotb.regression                  Run_001 failed
+                                                        Traceback (most recent call last):
+                                                          File "/home/AM2/chipyard/.conda-env/lib/python3.10/site-packages/cocotb/regression.py", line 732, in _my_test
+                                                            await function(dut, *args, **kwargs)
+                                                          File "/home/AM2/chipyard/.conda-env/lib/python3.10/site-packages/cocotb/task.py", line 289, in __await__
+                                                            return (yield self)
+                                                          File "/home/AM2/prefuzz/processorfuzz/ProcessorFuzz/Fuzzer/Fuzzer.py", line 96, in Run
+                                                            ret = run_isa_test(isaHost, isa_input, stop, out, proc_num, assert_intr, isa_log, name)
+                                                          File "/home/AM2/prefuzz/processorfuzz/ProcessorFuzz/Fuzzer/src/utils.py", line 852, in run_isa_test
+                                                            isa_ret = isaHost.run_test(isa_input, assert_intr, log)
+                                                          File "/home/AM2/prefuzz/processorfuzz/ProcessorFuzz/Fuzzer/ISASim/host.py", line 31, in run_test
+                                                            return subprocess.call(args)
+                                                          File "/home/AM2/chipyard/.conda-env/lib/python3.10/subprocess.py", line 345, in call
+                                                            with Popen(*popenargs, **kwargs) as p:
+                                                          File "/home/AM2/chipyard/.conda-env/lib/python3.10/subprocess.py", line 971, in __init__
+                                                            self._execute_child(args, executable, preexec_fn, close_fds,
+                                                          File "/home/AM2/chipyard/.conda-env/lib/python3.10/subprocess.py", line 1863, in _execute_child
+                                                            raise child_exception_type(errno_num, err_msg, err_filename)
+                                                        FileNotFoundError: [Errno 2] No such file or directory: '/home/AM2/prefuzz/processorfuzz/ProcessorFuzz/spike/riscv-isa-sim-all-csr/build/bin/spike'
+  1000.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** ProcessorFuzz.Run_001          FAIL        1000.00           0.28       3560.60  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0               1000.00           0.49       2021.71  **
+                                                        **************************************************************************************
+                                                        
+- :0: Verilog $finish
+make[1]: Leaving directory '/home/AM2/prefuzz/processorfuzz/ProcessorFuzz/Fuzzer'

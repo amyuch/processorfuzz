@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1760190444" />
+    <testcase name="Run_001" classname="ProcessorFuzz" file="/home/AM2/chipyard/.conda-env/lib/python3.10/site-packages/cocotb/regression.py" lineno="731" time="303.52488470077515" sim_time_ns="1270417000" ratio_time="4185544.7906764518" />
+  </testsuite>
+</testsuites>

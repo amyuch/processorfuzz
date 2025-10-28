@@ -1,0 +1,297 @@
+test  1
+Number of transitions :  60
+Instruction count     :  270
+test  2
+Number of transitions :  54
+Instruction count     :  272
+test  3
+Number of transitions :  57
+Instruction count     :  299
+test  4
+Number of transitions :  41
+Instruction count     :  280
+test  5
+Number of transitions :  42
+Instruction count     :  300
+test  6
+Number of transitions :  58
+Instruction count     :  275
+test  7
+Number of transitions :  57
+Instruction count     :  287
+test  8
+Number of transitions :  58
+Instruction count     :  2018
+test  9
+Number of transitions :  57
+Instruction count     :  296
+test  10
+Number of transitions :  45
+Instruction count     :  302
+test  11
+Number of transitions :  40
+Instruction count     :  275
+test  12
+Number of transitions :  75
+Instruction count     :  3734
+test  14
+Number of transitions :  41
+Instruction count     :  281
+test  15
+Number of transitions :  183
+Instruction count     :  11122
+test  16
+Number of transitions :  89
+Instruction count     :  5611
+test  17
+Number of transitions :  42
+Instruction count     :  305
+test  18
+Number of transitions :  45
+Instruction count     :  311
+test  19
+Number of transitions :  44
+Instruction count     :  314
+test  20
+Number of transitions :  41
+Instruction count     :  280
+test  21
+Number of transitions :  42
+Instruction count     :  297
+test  22
+Number of transitions :  41
+Instruction count     :  292
+test  23
+Number of transitions :  42
+Instruction count     :  2015
+test  24
+Number of transitions :  59
+Instruction count     :  289
+test  25
+Number of transitions :  41
+Instruction count     :  290
+test  26
+Number of transitions :  41
+Instruction count     :  296
+test  27
+Number of transitions :  44
+Instruction count     :  294
+test  28
+Number of transitions :  40
+Instruction count     :  326
+test  29
+Number of transitions :  42
+Instruction count     :  294
+test  30
+Number of transitions :  82
+Instruction count     :  3817
+test  31
+Number of transitions :  40
+Instruction count     :  272
+test  32
+Number of transitions :  57
+Instruction count     :  282
+test  33
+Number of transitions :  43
+Instruction count     :  300
+test  34
+Number of transitions :  46
+Instruction count     :  276
+test  35
+Number of transitions :  43
+Instruction count     :  314
+test  36
+Number of transitions :  43
+Instruction count     :  288
+test  37
+Number of transitions :  133
+Instruction count     :  7505
+test  38
+Number of transitions :  46
+Instruction count     :  279
+test  39
+Number of transitions :  57
+Instruction count     :  311
+test  40
+Number of transitions :  41
+Instruction count     :  289
+test  41
+Number of transitions :  59
+Instruction count     :  292
+test  42
+Number of transitions :  41
+Instruction count     :  279
+test  43
+Number of transitions :  41
+Instruction count     :  284
+test  44
+Number of transitions :  41
+Instruction count     :  288
+test  45
+Number of transitions :  45
+Instruction count     :  323
+test  46
+Number of transitions :  41
+Instruction count     :  300
+test  47
+Number of transitions :  45
+Instruction count     :  286
+test  48
+Number of transitions :  56
+Instruction count     :  2013
+test  49
+Number of transitions :  43
+Instruction count     :  2022
+test  50
+Number of transitions :  42
+Instruction count     :  304
+test  51
+Number of transitions :  41
+Instruction count     :  290
+test  52
+Number of transitions :  41
+Instruction count     :  296
+test  53
+Number of transitions :  133
+Instruction count     :  7499
+test  54
+Number of transitions :  46
+Instruction count     :  296
+test  55
+Number of transitions :  42
+Instruction count     :  300
+test  56
+Number of transitions :  36
+Instruction count     :  268
+test  57
+Number of transitions :  40
+Instruction count     :  287
+test  58
+Number of transitions :  42
+Instruction count     :  294
+test  59
+Number of transitions :  41
+Instruction count     :  296
+test  60
+Number of transitions :  39
+Instruction count     :  272
+test  61
+Number of transitions :  58
+Instruction count     :  2019
+test  62
+Number of transitions :  148
+Instruction count     :  9381
+test  63
+Number of transitions :  48
+Instruction count     :  300
+test  64
+Number of transitions :  41
+Instruction count     :  299
+test  65
+Number of transitions :  56
+Instruction count     :  2020
+test  66
+Number of transitions :  41
+Instruction count     :  273
+test  67
+Number of transitions :  42
+Instruction count     :  285
+test  68
+Number of transitions :  75
+Instruction count     :  3751
+test  69
+Number of transitions :  45
+Instruction count     :  299
+test  70
+Number of transitions :  56
+Instruction count     :  2023
+test  71
+Number of transitions :  41
+Instruction count     :  275
+test  72
+Number of transitions :  41
+Instruction count     :  2017
+test  73
+Number of transitions :  41
+Instruction count     :  288
+test  74
+Number of transitions :  57
+Instruction count     :  287
+test  75
+Number of transitions :  58
+Instruction count     :  311
+test  76
+Number of transitions :  41
+Instruction count     :  286
+test  77
+Number of transitions :  42
+Instruction count     :  282
+test  78
+Number of transitions :  57
+Instruction count     :  284
+test  79
+Number of transitions :  41
+Instruction count     :  287
+test  80
+Number of transitions :  45
+Instruction count     :  291
+test  81
+Number of transitions :  41
+Instruction count     :  288
+test  82
+Number of transitions :  41
+Instruction count     :  282
+test  83
+Number of transitions :  41
+Instruction count     :  327
+test  84
+Number of transitions :  60
+Instruction count     :  3744
+test  85
+Number of transitions :  57
+Instruction count     :  280
+test  86
+Number of transitions :  41
+Instruction count     :  292
+test  87
+Number of transitions :  44
+Instruction count     :  300
+test  88
+Number of transitions :  54
+Instruction count     :  283
+test  89
+Number of transitions :  41
+Instruction count     :  282
+test  90
+Number of transitions :  42
+Instruction count     :  289
+test  91
+Number of transitions :  40
+Instruction count     :  269
+test  92
+Number of transitions :  40
+Instruction count     :  272
+test  93
+Number of transitions :  40
+Instruction count     :  275
+test  94
+Number of transitions :  41
+Instruction count     :  278
+test  95
+Number of transitions :  41
+Instruction count     :  292
+test  96
+Number of transitions :  44
+Instruction count     :  341
+test  97
+Number of transitions :  41
+Instruction count     :  295
+test  98
+Number of transitions :  57
+Instruction count     :  293
+test  99
+Number of transitions :  60
+Instruction count     :  3741
+test  100
+Number of transitions :  75
+Instruction count     :  3738
