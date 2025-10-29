@@ -1,11 +1,16 @@
 from cocotb.decorators import coroutine
-from .isa_simulator import ISA_Simulator
-from .rtl_simulator import RTL_Simulator
-from .trace_comparison import trace_compare
+
+from execution.isa_simulator import ISA_Simulator
+from execution.rtl_simulator import RTL_Simulator
+from execution.trace_comparison import trace_compare
+from execution.preprocessor import rvPreProcessor
+from execution.signature_checker import SignatureChecker
 from common.constants import SUCCESS
 
 class TestExecutor:
     def __init__(self, dut, toplevel, out_dir, debug=False):
+        self.preprocessor = rvPreProcessor(...)  # Init with env parser
+        self.checker = SignatureChecker(toplevel)
         self.dut = dut
         self.toplevel = toplevel
         self.out_dir = out_dir
