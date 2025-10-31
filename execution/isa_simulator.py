@@ -18,8 +18,12 @@ class ISA_Simulator:
             self.spike_path,
             "--log", isa_log,
             "--isa=rv64g",  # RISC-V ISA configuration
-            isa_input.elf_path  # Path to compiled ELF
+            isa_input.binary  # Use 'binary' attribute to match original isaInput structure
         ]
+
+        # Add interrupt handling if needed
+        if assert_intr and isa_input.intrfile:
+            cmd.extend(["--intr", isa_input.intrfile])
 
         # Execute Spike
         try:
@@ -58,3 +62,9 @@ class ISA_Simulator:
                     rd = parts[5] if len(parts) > 5 else "x0"
                     rd_val = parts[7] if len(parts) > 7 else "0"
                     csv_fd.write(f"{pc},{inst},{rd},{rd_val}\n")
+
+
+class isaInput:
+    def __init__(self, binary, intrfile):
+        self.binary = binary  # ELF path
+        self.intrfile = intrfile  # Interrupt files

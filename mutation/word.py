@@ -1,7 +1,7 @@
 import os
 import random
 
-from riscv_definitions import *
+from mutation.riscv_definitions import *
 
 NONE   = 0
 CF_J   = 1

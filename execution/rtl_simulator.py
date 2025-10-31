@@ -178,3 +178,11 @@ class RTL_Simulator:
     def _get_covsum(self):
         cov_mask = (1 << len(self.dut.io_covSum)) - 1
         return self.dut.io_covSum.value & cov_mask
+
+class rtlInput:
+    def __init__(self, hexfile, intrfile, data, symbols, max_cycles):
+        self.hexfile = hexfile    # Hex mirror path
+        self.intrfile = intrfile  # Interrupt file path
+        self.data = data          # Data Segmentation
+        self.symbols = symbols    # Symbol Table (Address)
+        self.max_cycles = max_cycles  # Max Simulation cycle

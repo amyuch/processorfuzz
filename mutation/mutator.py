@@ -2,7 +2,7 @@ import os
 import random
 from copy import deepcopy
 
-from inst_generator import Word, rvInstGenerator, PREFIX, MAIN, SUFFIX
+from mutation.inst_generator import Word, rvInstGenerator, PREFIX, MAIN, SUFFIX
 
 """ Mutation phases """
 GENERATION = 0
@@ -340,6 +340,7 @@ class rvMutator():
 
     def mutate_words(self, seed_words, part, max_num):
         words = []
+        max_label = len(seed_words) - 1 if seed_words else 0
 
         for word in seed_words:
             rand = random.random()
@@ -348,11 +349,16 @@ class rvMutator():
             elif rand < 0.75:
                 words.append(word)
                 new_word = self.inst_generator.get_word(part)
+                self.inst_generator.populate_word(new_word, max_label, part)
                 words.append(new_word)
 
         words = words[0:max_num]
         words = self.reset_labels(words, part)
-
+        
+        for word in words:
+            if not word.populated:
+                self.inst_generator.populate_word(word, len(words)-1, part)
+        
         return words
 
     def get(self, it, assert_intr=False):
