@@ -1,7 +1,7 @@
 import random
 import queue
 
-from adapters.tilelink.definitions import *
+from execution.src.adapters.tilelink.definitions import *
 
 
 """ Tilelink ports and real name mappings """

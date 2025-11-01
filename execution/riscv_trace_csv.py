@@ -20,7 +20,7 @@ import csv
 import re
 import logging
 import sys
-from lib import *
+from scripts.lib import *
 
 
 class RiscvInstructionTraceEntry(object):

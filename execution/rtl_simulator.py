@@ -1,9 +1,9 @@
 from cocotb.decorators import coroutine
 from cocotb.triggers import RisingEdge, Timer
 from cocotb import fork
-from common.utils import debug_print
-from src.reader.tile_reader import tileSrcReader
-from src.adapters.tile_adapter import tileAdapter
+# from common.utils import debug_print
+from execution.src.reader.tile_reader import tileSrcReader
+from execution.src.adapters.tile_adapter import tileAdapter
 
 # Constants from original RTLSim.host
 SUCCESS = 0
@@ -28,11 +28,15 @@ class RTL_Simulator:
         port_names = paths['port_names']
         monitor = (paths['monitor_pc'][0], paths['monitor_valid'][0])
         self.adapter = tileAdapter(dut, port_names, monitor, debug)
+    
+    def debug_print(self, message):
+        if self.debug:
+            print(message)
 
     @coroutine
     def run_test(self, rtl_input, iteration, assert_intr=False):
         """Merged from rvRTLhost.run_test and original RTL_Simulator.run_test"""
-        debug_print(f"[RTL_Simulator] Starting simulation (test {iteration})", self.debug)
+        self.debug_print(f"[RTL_Simulator] Starting simulation (test {iteration})", self.debug)
 
         # Load bootrom and test memory (from rvRTLhost)
         bootrom_addrs, memory = self._set_bootrom()

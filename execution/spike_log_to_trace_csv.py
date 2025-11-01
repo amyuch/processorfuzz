@@ -25,7 +25,7 @@ import logging
 sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
 
 from riscv_trace_csv import *
-from lib import *
+from scripts.lib import *
 
 RD_RE    = re.compile(r"core .*(?P<pri>\d) 0x(?P<addr>[a-f0-9]+?) \((?P<bin>.*?)\).* (?P<reg>[xf]\s*\d*?) 0x(?P<val>[a-f0-9]+)")
 CORE_RE  = re.compile(r"core.*0x(?P<addr>[a-f0-9]+?) \(0x(?P<bin>.*?)\) \[0x(?P<mstatus>[a-f0-9]+?),(?P<frm>[a-f0-9]+?),(?P<fflags>[a-f0-9]+?),(?P<mcause>[a-f0-9]+?),(?P<scause>[a-f0-9]+?),(?P<medeleg>[a-f0-9]+?),(?P<mcounteren>[a-f0-9]+?),(?P<scounteren>[a-f0-9]+?),(?P<dcsr>[a-f0-9]+?)\] (?P<instr>.*?)$")

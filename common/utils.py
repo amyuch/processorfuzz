@@ -13,13 +13,13 @@ import subprocess
 import time
 import sys
 
-from ISASim.host import rvISAhost
-from RTLSim.host import rvRTLhost
+from execution.isa_simulator import ISA_Simulator as rvISAhost
+from execution.rtl_simulator import RTL_Simulator as rvRTLhost
 
-from src.preprocessor import rvPreProcessor
-from src.signature_checker import sigChecker
-from src.mutator import simInput, rvMutator
-from src.multicore_manager import proc_state, procManager
+from execution.preprocessor import rvPreProcessor
+from execution.signature_checker import sigChecker
+from mutation.mutator import simInput, rvMutator
+from execution.multicore_manager import proc_state, procManager
 
 ISA_TIME_LIMIT = 1
 

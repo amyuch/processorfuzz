@@ -1,17 +1,21 @@
 import os
 import subprocess
-from common.utils import debug_print
+# from common.utils import debug_print
 from common.constants import SUCCESS, TIME_OUT
 
 class ISA_Simulator:
     def __init__(self, debug=False, spike_path="spike"):
         self.debug = debug
         self.spike_path = spike_path  # Path to Spike ISA simulator
+    
+    def debug_print(self, message):
+        if self.debug:
+            print(message)
 
     def run_test(self, isa_input, out_dir, it, assert_intr=False):
         """Run test on Spike and generate trace log"""
         isa_log = f"{out_dir}/trace/isa_{it}.log"
-        debug_print(f"Running ISA test {it} -> {isa_log}", self.debug)
+        self.debug_print(f"Running ISA test {it} -> {isa_log}", self.debug)
 
         # Command to run Spike with trace generation
         cmd = [
@@ -34,12 +38,12 @@ class ISA_Simulator:
                 timeout=30  # Prevent hanging
             )
         except subprocess.TimeoutExpired:
-            debug_print(f"ISA simulation timed out (test {it})", self.debug)
+            self.debug_print(f"ISA simulation timed out (test {it})", self.debug)
             return (TIME_OUT, None)
 
         # Check for errors
         if result.returncode != 0:
-            debug_print(
+            self.debug_print(
                 f"ISA simulation failed (test {it}): {result.stderr.decode()}",
                 self.debug
             )

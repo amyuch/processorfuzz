@@ -2,9 +2,8 @@ import os
 import subprocess
 import random
 from shutil import copyfile
-from mutation.mutator import simInput, templates
-from mutation.riscv_definitions import V_U  # Supplement V_U constant definition
-from common.utils import debug_print
+from mutation.mutator import simInput, templates, V_U  # Supplement V_U constant definition
+# from common.utils import debug_print
 
 class rvPreProcessor():
     def __init__(self, cc, elf2hex, template='Template', out_base='.', proc_num=0):
@@ -22,6 +21,10 @@ class rvPreProcessor():
         ]
 
         self.elf2hex_args = [elf2hex, '--bit-width', '64', '--input']
+
+    def debug_print(self, message):
+        if self.debug:
+            print(message)
 
     def get_symbols(self, elf_name, sym_name):
         """Extract symbol table from ELF file"""

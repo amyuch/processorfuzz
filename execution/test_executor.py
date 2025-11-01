@@ -2,7 +2,7 @@ from cocotb.decorators import coroutine
 
 from execution.isa_simulator import ISA_Simulator
 from execution.rtl_simulator import RTL_Simulator
-from execution.trace_comparison import trace_compare
+from execution.trace_compare import trace_compare
 from execution.preprocessor import rvPreProcessor
 from execution.signature_checker import SignatureChecker
 from common.constants import SUCCESS
